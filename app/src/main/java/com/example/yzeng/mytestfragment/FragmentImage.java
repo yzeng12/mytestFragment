@@ -11,12 +11,12 @@ import android.widget.ImageView;
 public class FragmentImage extends Fragment {
 
     ImageView iv;
-    int[] image_ids= {R.drawable.image,R.drawable.image,R.drawable.image,R.drawable.image,R.drawable.image};
+    int[] image_ids= {R.drawable.image,R.drawable.im,R.drawable.password,R.drawable.username,R.drawable.huaji};
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_image,container,false);
-        iv = view.findViewById(R.id.imageView2);
+        iv = view.findViewById(R.id.imageViewInfragment);
 
         Bundle bundle = getArguments();
 

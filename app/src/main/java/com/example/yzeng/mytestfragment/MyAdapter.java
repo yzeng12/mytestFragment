@@ -64,7 +64,7 @@ public class MyAdapter extends BaseAdapter{
             @Override
             public void onClick(View v) {
               //
-                ((MainActivity) ctx).getFragmentManager().beginTransaction().replace(R.id.Relativelayout,fragment_text).commit();
+                ((MainActivity) ctx).getFragmentManager().beginTransaction().replace(R.id.Relativelayout,fragment_text).addToBackStack(null).commit();
 
             }
         });
@@ -72,7 +72,7 @@ public class MyAdapter extends BaseAdapter{
             @Override
             public void onClick(View v) {
 
-               ((MainActivity)ctx).getFragmentManager().beginTransaction().replace(R.id.Relativelayout,fragment_img).commit();
+               ((MainActivity)ctx).getFragmentManager().beginTransaction().replace(R.id.Relativelayout,fragment_img).addToBackStack(null).commit();
             }
         });
 

@@ -5,10 +5,10 @@ import android.os.Bundle;
 import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
-    ListView listView;
+ /*   ListView listView;
     String[] countries={"india","china","usa","england","japan"};
     int[] image_ids= {R.drawable.image,R.drawable.image,R.drawable.image,R.drawable.image,R.drawable.image};
-
+*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -11,7 +11,7 @@ import android.widget.ListView;
 public class FragmentMain extends Fragment{
 
     String[] countries={"india","china","usa","england","japan"};
-    int[] image_ids= {R.drawable.image,R.drawable.image,R.drawable.image,R.drawable.image,R.drawable.image};
+    int[] image_ids= {R.drawable.image,R.drawable.im,R.drawable.password,R.drawable.username,R.drawable.huaji};
     @Nullable
     ListView listView;
     MyAdapter myCustomAdapter;

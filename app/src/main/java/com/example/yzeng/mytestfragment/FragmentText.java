@@ -9,16 +9,16 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 public class FragmentText extends Fragment {
-    TextView tv2;
+    TextView tv;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_text,container,false);
-        tv2 = view.findViewById(R.id.textViewFragment);
+        tv = view.findViewById(R.id.textViewFragment);
 
         Bundle bundle = getArguments();
         String data = bundle.getString("key");
-        tv2.setText(data);
+        tv.setText(data);
 
         return view;
     }
