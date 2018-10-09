@@ -3,6 +3,7 @@ package com.example.yzeng.mytestfragment;
 import android.app.Activity;
 import android.content.Context;
 
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -49,11 +50,21 @@ public class MyAdapter extends BaseAdapter{
         //ConstraintLayout constraintLayout = view.findViewById(R.id.myconstrainlayout);
         tv.setText(mycontries[position]);
         iv.setImageResource(myimage[position]);
+        Bundle bundle2 = new Bundle();
+        bundle2.putInt("key", position);
+        final FragmentImage fragment_img = new FragmentImage();
+        fragment_img.setArguments(bundle2);
+
+        Bundle bundle = new Bundle();
+        bundle.putString("key", mycontries[position]);
+        final FragmentText fragment_text = new FragmentText();
+        fragment_text.setArguments(bundle);
+
         tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
               //
-                ((MainActivity) ctx).getFragmentManager().beginTransaction().replace(R.id.Relativelayout,new FragmentText()).commit();
+                ((MainActivity) ctx).getFragmentManager().beginTransaction().replace(R.id.Relativelayout,fragment_text).commit();
 
             }
         });
@@ -61,7 +72,7 @@ public class MyAdapter extends BaseAdapter{
             @Override
             public void onClick(View v) {
 
-               ((MainActivity)ctx).getFragmentManager().beginTransaction().replace(R.id.Relativelayout,new FragmentImage()).commit();
+               ((MainActivity)ctx).getFragmentManager().beginTransaction().replace(R.id.Relativelayout,fragment_img).commit();
             }
         });
 
